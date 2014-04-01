@@ -12,9 +12,16 @@ class CreateFoldagramTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('foldagram', function(Blueprint $table)
+		Schema::create('foldagram', function(Blueprint $table)
 		{
-			//
+                    $table->increments('id');
+                    $table->text('message');
+                    $table->string('image');
+                    $table->boolean('status');
+                    $table->integer('user_id');
+                    
+                    $table->integer('exported');
+                    $table->timestamps();
 		});
 	}
 
@@ -25,10 +32,7 @@ class CreateFoldagramTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('foldagram', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::dropIfExists('foldagram');
 	}
 
 }
