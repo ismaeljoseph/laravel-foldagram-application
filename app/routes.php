@@ -11,3 +11,7 @@
 |
 */
 
+Route::get('/', function(){
+    return View::make('home')->
+        with('title', 'The Foldagram')->with('class', 'home');
+});
