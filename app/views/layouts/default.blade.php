@@ -8,11 +8,14 @@
         <link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" 
             rel="stylesheet" type="text/css">
         
-        {{ HTML::style('css/bootstrap.css') }}
-        {{ HTML::style('css/style.css') }}
+        {{ HTML::style('css/bootstrap.css') }}        
         {{ HTML::style('css/flexslider.css') }}
+        {{ HTML::style('css/style.css') }}
+        
         {{ HTML::script('js/jquery-1.9.1.js') }}
+        {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/jquery.flexslider.js') }}
+        {{ HTML::script('js/global.js') }}
     </head>
     <body class="{{ $class }}">
         <div class="container">
@@ -84,5 +87,6 @@
                 </div> 
             </div>
         </div><!-- End Container -->
+        @include('foldagram')
     </body>
 </html>
