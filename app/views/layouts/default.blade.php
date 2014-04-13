@@ -68,7 +68,7 @@
                 <div class="span8 footer-menu">
                     <ul>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
+                        <li>{{ link_to_route('about', 'About Us') }}</li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Register</a></li>
                     </ul>
