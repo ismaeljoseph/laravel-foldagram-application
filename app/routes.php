@@ -20,3 +20,21 @@ Route::get('/about', array('as' => 'about', function(){
     return View::make('about')->
         with('title', 'About Foldagram')->with('class', 'about');
 }));
+
+Route::post('/subscribe', array('as' => 'post_subscribe', function(){
+    $input = Input::all();
+    $rules = array('email' => 'required|email');
+    
+    $validation = Validator::make($input, $rules);
+    
+    if($validation->passes()){
+        Subscribe::create($input);
+        return Redirect::to('/')
+            ->with('success', 'Thanks for signing UpFoldagram');
+    }
+    
+    return Redirect::to('/')
+        ->withInput()
+        ->withErrors($validation)
+        ->with('message', 'There were validation errors.');
+}));

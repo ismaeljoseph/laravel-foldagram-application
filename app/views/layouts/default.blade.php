@@ -55,9 +55,14 @@
                 @yield('content')
             </div>
             <div class="row-fluid subscribe-form">
+                @if($errors->any())
+                    <ul>
+                        {{implode('', $errors->all('<li class="error">:message</li>')) }}
+                    </ul>
+                @endif
                 <div class="span12 subscribe-content">
                     
-                    {{ Form::open() }}
+                    {{ Form::open(array('route' => 'post_subscribe')) }}
                         {{ Form::label('label', 'Sign Up for our Newsletter and Updates!') }}
                         {{ Form::text('email', null, array('class' => 'input-large', 'placeholder' => '')) }}
                         {{ Form::submit('Subscribe') }}
