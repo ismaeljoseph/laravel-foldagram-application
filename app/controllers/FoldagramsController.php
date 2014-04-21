@@ -29,6 +29,21 @@ class FoldagramsController extends BaseController{
         }
         
         
+        $recipients_input = Input::get('add');
+        
+        if(!empty($recipients_input)){
+            
+            $recipients = array();
+            
+            foreach($recipients_input as $value){
+                $recipient = new Recipient(array(
+                    'fullname' => $value['fullname'],
+                    'address_one' => $value['address_one'],
+                ));
+                
+                $foldagram->recipients()->save($recipient);
+            }
+        }
         
         return Redirect::to(URL::route('/'));
     }

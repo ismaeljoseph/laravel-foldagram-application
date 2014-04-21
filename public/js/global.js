@@ -5,6 +5,35 @@ $(window).load(function(){
     });
 });
 $(function() {
+    
+    var i = 0;
+    var j = 0;
+    
+    var html = $('#recipient_address').html();
+    
+    html = html.replace("rone",j);
+    html = html.replace("aid",j);
+    $('#recipient_address').html(html);
+    
+    $(".add").on('click', function(){
+        //$('.total_foldagram p.total').html("<strong>Total Item: </strong>"+j)
+        var html = $('#recipient_address').html();
+        html = html.replace(/0/g, ++i);
+        html = html.replace("rone", ++j);
+        html = html.replace("aid", j);
+        $('.recipient_address_wapper .recipient_address').hide();
+        $('.recipient_address_wapper').append(html);
+        $('.remove, .acount').show();
+    });
+    
+    $('.remove').on('click', function(){
+        $('#recip_'+j).remove();
+        $('#recip_'+--j).show();
+        if(j==1){
+            $('.remove, .acount').hide();
+        }
+        return false;
+    });
 });
 
 jQuery(function(){

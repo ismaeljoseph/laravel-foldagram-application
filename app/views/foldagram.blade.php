@@ -33,18 +33,20 @@
                     </div>
                     <div class="address">
                         <div class="photocreate-form recipient_address_wapper">
-                            <div class="recipient_address" id="recip_1">
-                                <h3>
-                                    Recipient's Address 
-                                    <span class="acount" style="display: none;">1</span>
-                                </h3>
-                                <input placeholder="Full Name* :" class="required" type="text"
-                                    name="add[0][fullname]" value="">
-                                {{ Form::textarea("add[0][address_one]", null, array(
-                                    'size' => '50x8',
-                                    'placeholder' => "Enter Recipient's Address here:",
-                                    'class' => 'required'
-                                )) }}
+                            <div id="recipient_address">
+                                <div class="recipient_address" id="recip_aid">
+                                    <h3>
+                                        Recipient's Address 
+                                        <span class="acount">- rone</span>
+                                    </h3>
+                                    <input placeholder="Full Name* :" class="required" type="text"
+                                        name="add[0][fullname]" value="">
+                                    {{ Form::textarea("add[0][address_one]", null, array(
+                                        'size' => '50x8',
+                                        'placeholder' => "Enter Recipient's Address here:",
+                                        'class' => 'required'
+                                    )) }}
+                                </div>
                             </div>
                         </div>
                     </div>
