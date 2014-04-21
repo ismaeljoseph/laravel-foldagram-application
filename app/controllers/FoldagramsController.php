@@ -45,6 +45,24 @@ class FoldagramsController extends BaseController{
             }
         }
         
-        return Redirect::to(URL::route('/'));
+        try{
+            $qty = count(Input::get('add'));
+            
+            $item = array(
+                'id'            => $foldagram->id,
+                'quantity'      =>$qty,
+                'price'         =>Config::get('foldagram.price'),
+                'name'          =>'Foldagram'
+            );
+            
+            //Add the item to the shopping cart
+            Cart::insert($item);
+            
+            return Redirect::route('/')
+                    ->with('success', "Your Foldagram Has Saved")
+                    ->with('redirect', "preview");
+        } catch (Exception $ex) {
+            return Redirect::route('/')->with('error', $ex->getMessage());
+        }
     }
 }

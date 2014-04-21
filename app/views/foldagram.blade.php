@@ -2,6 +2,17 @@
     aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
         <div class="modal-body">
+            
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+            @if(Session::has('error'))
+                <div class="alert alert-error">
+                    {{ Session::get('error') }}
+                </div>
+            @endif
             <div class="cfrom-wapper">
                 <img src="{{ asset('img/create-form-flow.png') }}"/>
                 {{ Form::open(array('url' => URL::route('create'), 'files' => true )) }}
