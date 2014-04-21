@@ -59,7 +59,8 @@ class FoldagramsController extends BaseController{
             Cart::insert($item);
             
             return Redirect::route('/')
-                    ->with('success', "Your Foldagram Has Saved")
+                    ->with('id', $foldagram->id)
+                    ->with('dsuccess', "Your Foldagram Has Saved")
                     ->with('redirect', "preview");
         } catch (Exception $ex) {
             return Redirect::route('/')->with('error', $ex->getMessage());

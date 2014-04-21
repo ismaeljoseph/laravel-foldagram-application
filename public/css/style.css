@@ -374,3 +374,223 @@ submit .submit-content .btn, .editradd, .removeadd  {
     text-align: center;
     
 }
+
+.horizontal .submit {
+  position: absolute;
+  top: 640px;
+}
+.vertical .submit {
+  position: absolute;
+  top: 533px;
+} 
+.horizontal .submit .submit-content {
+    width:486px;
+    margin: 0 110px 0 100px;
+    text-align: center; 
+    padding-top: 40px;
+   /* padding-bottom: 90px;*/
+
+} 
+
+.vertical .submit .submit-content {
+    margin: 0 0px 0 263px;
+    padding-top: 40px;
+    text-align: center;
+    width: 485px;
+    padding-left: 20px;
+   /* padding-bottom: 90px;*/
+
+} 
+
+.submit-btn, .approve-btn {
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+    
+}
+.vertical .approve-btn {
+     display: inline-block;
+    float: right;
+    margin-left: 65px;
+    margin-right: 25px !important;
+    margin-top: 0;
+    text-align: center;
+    width: 40%;
+}
+
+
+#hpreview {
+    width: 1110px;
+    left: 37%;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 0 #000;
+    top:10px;
+}
+
+#hpreview .modal-body {
+    max-height: 908px !important;
+    overflow: hidden;
+    padding:0; 
+    position: relative; 
+}
+#hpreview .vertical-body  {
+    max-height: 675px !important;
+}
+#hpreview .modal-body .cfrom-wapper {
+    width: 758px;
+    float: left;
+
+}
+
+#hpreview .modal-body #raddress {
+    width: 350px;
+    float: right;
+    margin-top: 55px;
+    overflow-x: hidden;
+    height: 850px;
+    visibility: visible;
+}
+#hpreview .vertical-body #raddress  {
+    height: 580px;
+}
+#hpreview .modal-body #raddress:hover {
+    overflow-y: auto;
+}
+#hpreview .modal-body .horizontal .textmessage  {
+    position: absolute;
+    left: 15%;
+    top: 70px;
+    width: 355px;
+    height: 225px;
+    overflow: hidden;    
+}
+#hpreview .modal-body .vertical .textmessage  {
+      left: 6%;
+    position: absolute;
+    top: 199px;
+    width: 185px;
+    overflow: hidden;  
+}
+#hpreview .modal-body .textmessage {
+    font-family: PapyrusRegular;
+    font-size: 14px !important;
+    font-weight: bold;
+    line-height: 20px;
+    color: #020;
+
+}
+
+#hpreview .modal-body .textmessage p.tab{
+    text-align: right;
+}
+
+#hpreview .modal-body .horizontal .imgpreview {
+    margin-left: 100px;
+    margin-top: 1px;
+    width: 477px;
+    line-height: 314px;
+    position: absolute;
+    top: 316px;
+    background-color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+#hpreview .modal-body .horizontal .imgpreview img{
+    vertical-align: middle;
+    margin: auto;
+    max-height: 312px;
+    max-width: 475px;
+}
+
+#hpreview .modal-body .vertical .imgpreview  {
+    background-color: #FFFFFF;
+    height: 398px;
+    line-height: 400px;
+    margin-left: 265px;
+    margin-top: 0;
+    padding: 5px;
+    position: absolute;
+    top: 142px;
+    width: 261px;
+    text-align: center;
+}
+#hpreview .modal-body .vertical .imgpreview  img {
+    /*width: 262px;*/
+    vertical-align: middle;
+    margin: auto;
+    max-height: 400px;
+    max-width: 260px;
+}
+#raddress .address_list {
+    background-image: url("../img/address_list.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 341px;
+    height: 223px;
+    font-size: 13px !important;
+    line-height: 20px;
+    color: #020;
+    margin-bottom: 30px;
+    position: relative;
+
+
+}
+#raddress .address_list .fromaddress {
+    padding: 10px 0 0 37px;
+    width: 150px;
+    margin-bottom: 10px;
+
+}
+#raddress .address_list  .toaddress {
+     padding: 0px 0 0 90px;
+     width: 220px;
+}
+#raddress .address_list  .toaddress p { 
+    margin-bottom: 0px;
+}
+.editradd {
+    position: absolute;
+    bottom: 45px;
+    left: 10px;
+    padding: 5px;
+    font-size: 15px;
+    width: 60px;
+}
+.removeadd {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px;
+    font-size: 13px !important;
+    width: 49px;
+}
+
+
+#hpreview button.close{
+    left: 35%;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+}
+.vertical-parrent button.close {
+    left: 40% !important;
+    top: 60px !important;
+}
+#hpreview, #popup {
+    position: absolute !important;
+}
+.editaddress input {
+    margin-bottom: 2px;
+}
+.modal .modal-body .alert {
+    position: absolute;
+    width: 95%;
+    z-index: 2;
+    top: 5px;
+}
+#raddress .fromaddress p {
+    margin-bottom: 0;
+
+}

@@ -1,3 +1,18 @@
+<div id="recipient_address" style="display:none;">
+    <div class="recipient_address" id="recip_aid">
+        <h3>
+            Recipient's Address 
+            <span class="acount">- rone</span>
+        </h3>
+        <input placeholder="Full Name* :" class="required" type="text"
+            name="add[zero][fullname]" value="">
+        {{ Form::textarea("add[zero][address_one]", null, array(
+            'size' => '50x8',
+            'placeholder' => "Enter Recipient's Address here:",
+            'class' => 'required'
+        )) }}
+    </div>
+</div>
 <div id="popup" class="modal hide fade" tabindex="-1" role="dialog" 
     aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -44,21 +59,7 @@
                     </div>
                     <div class="address">
                         <div class="photocreate-form recipient_address_wapper">
-                            <div id="recipient_address">
-                                <div class="recipient_address" id="recip_aid">
-                                    <h3>
-                                        Recipient's Address 
-                                        <span class="acount">- rone</span>
-                                    </h3>
-                                    <input placeholder="Full Name* :" class="required" type="text"
-                                        name="add[0][fullname]" value="">
-                                    {{ Form::textarea("add[0][address_one]", null, array(
-                                        'size' => '50x8',
-                                        'placeholder' => "Enter Recipient's Address here:",
-                                        'class' => 'required'
-                                    )) }}
-                                </div>
-                            </div>
+                            <!-- daynamic content  by jqueyr add more -->
                         </div>
                     </div>
                     <div class="submit">

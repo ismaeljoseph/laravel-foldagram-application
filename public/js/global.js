@@ -9,11 +9,32 @@ $(function() {
     var i = 0;
     var j = 0;
     
-    var html = $('#recipient_address').html();
+    $('.address .alert-error, .acount').hide();
     
-    html = html.replace("rone",j);
-    html = html.replace("aid",j);
-    $('#recipient_address').html(html);
+    $('.submit-content .edit-btn').click(function(){
+        j = Number(total_item)+1;
+        $('#hpreview').modal('hide');
+        $('#popup').modal('show');
+    });
+    
+    $('.enter-message').limit('1200', '#charsLeft');
+    
+    if(total_item == 0){
+        var j=1;
+        $('.remove').hide();
+    } else {
+        $('.acount').show();
+        $('.next').click();
+        var j = Number(total_item)+1;
+    }
+    
+    $('.remove').hide();
+    var html = $('#recipient_address').html();
+    html = html.replace(/zero/g, i);
+    html = html.replace("rone", j);
+    html = html.replace("aid", j);
+    
+    $(".recipient_address_wapper").append(html);
     
     $(".add").on('click', function(){
         //$('.total_foldagram p.total').html("<strong>Total Item: </strong>"+j)

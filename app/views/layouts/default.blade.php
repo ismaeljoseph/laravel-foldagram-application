@@ -10,12 +10,22 @@
         
         {{ HTML::style('css/bootstrap.css') }}        
         {{ HTML::style('css/flexslider.css') }}
+        {{ HTML::style('css/jquery-ui-git.css') }}
         {{ HTML::style('css/style.css') }}
         
         {{ HTML::script('js/jquery-1.9.1.js') }}
-        {{ HTML::script('js/bootstrap.min.js') }}
+        {{ HTML::script('js/bootstrap.min.js') }}        
+        {{ HTML::script('js/jquery-ui-git.js') }}
+        {{ HTML::script('js/jquery.limit.js') }}
+        
         {{ HTML::script('js/jquery.flexslider.js') }}
+        
         {{ HTML::script('js/global.js') }}
+        
+        <script type="text/javascript">
+            var base_url = '<?php echo URL::to("/"); ?>';
+            var total_item = "{{ Cart::totalItems() }}";
+        </script>
     </head>
     <body class="{{ $class }}">
         <div class="container">
@@ -87,6 +97,23 @@
                 </div> 
             </div>
         </div><!-- End Container -->
+        @if(Session::has('id'))
+            <?php 
+                $foldagram_data = Foldagram::find(Session::get('id'));
+                $id = (int) Session::get('id');
+                $foldagram_address = $foldagram_data->recipients()->getResults();
+                
+                $data = array(
+                    'fid'               => Session::get('id'),
+                    'foldagram_data'    => $foldagram_data,
+                    'foldagram_address' => $foldagram_address
+                );
+            ?>
+            
+        @else
+            <?php $data = array(); ?>
+        @endif
         @include('foldagram')
+        @include('foldagram-preview', $data)
     </body>
 </html>
