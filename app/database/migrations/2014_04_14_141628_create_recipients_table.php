@@ -12,7 +12,19 @@ class CreateRecipientsTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+            Schema::create('recipients', function(Blueprint $table){
+                $table->increments('id');
+                $table->integer('foldagram_id');
+                $table->string("fullname", 255);
+                $table->string("country", 255);
+                $table->string("address_one", 255);
+                $table->string("address_two", 255);
+                $table->string("city", 255);
+                $table->string("state", 255);
+                $table->string("zipcode", 255);
+                
+                $table->timestamps();
+            });
 	}
 
 	/**
@@ -22,7 +34,7 @@ class CreateRecipientsTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+            Schema::dropIfExists('recipients');
 	}
 
 }
