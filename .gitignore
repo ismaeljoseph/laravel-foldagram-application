@@ -7,4 +7,6 @@ composer.lock
 .DS_Store
 Thumbs.db
 /nbproject/private/
+/public/img/uploads
+/public/img/thumbnails
 *~

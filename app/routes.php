@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function(){
+Route::get('/', array('as' => '/', function(){
     return View::make('home')->
         with('title', 'The Foldagram')->with('class', 'home');
-});
+}));
 
 Route::get('/about', array('as' => 'about', function(){
     return View::make('about')->
@@ -38,3 +38,5 @@ Route::post('/subscribe', array('as' => 'post_subscribe', function(){
         ->withErrors($validation)
         ->with('message', 'There were validation errors.');
 }));
+
+Route::post('/create', array('as' => 'create', 'uses' => 'FoldagramsController@postCreate'));

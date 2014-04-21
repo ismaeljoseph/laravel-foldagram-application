@@ -4,7 +4,7 @@
         <div class="modal-body">
             <div class="cfrom-wapper">
                 <img src="{{ asset('img/create-form-flow.png') }}"/>
-                {{ Form::open() }}
+                {{ Form::open(array('url' => URL::route('create'), 'files' => true )) }}
                     <div class="setp1">
                         <div class="message create-form">
                             
