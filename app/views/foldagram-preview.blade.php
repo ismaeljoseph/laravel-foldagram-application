@@ -122,7 +122,10 @@
                             </div>    
                         </div>
                         <button class="editradd btn-large btn" value="{{ $value->id }}" type="button">Edit</button>
-
+                        <a href="{{ URL::to('remove/'.$value->id.'/'.$identifier) }}" 
+                           class="removeadd btn btn-danger">
+                           Remove
+                        </a>
                     </div>
                 @endforeach
             </div>

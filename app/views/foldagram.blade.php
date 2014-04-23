@@ -18,14 +18,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
         <div class="modal-body">
             
-            @if(Session::has('success'))
+            @if(Session::has('psuccess'))
                 <div class="alert alert-success">
-                    {{ Session::get('success') }}
+                    {{ Session::get('psuccess') }}
                 </div>
             @endif
-            @if(Session::has('error'))
+            @if(Session::has('perror'))
                 <div class="alert alert-error">
-                    {{ Session::get('error') }}
+                    {{ Session::get('perror') }}
                 </div>
             @endif
             <div class="cfrom-wapper">

@@ -106,7 +106,8 @@
                 $data = array(
                     'fid'               => Session::get('id'),
                     'foldagram_data'    => $foldagram_data,
-                    'foldagram_address' => $foldagram_address
+                    'foldagram_address' => $foldagram_address,
+                    'identifier'        => Session::get('identifier')
                 );
             ?>
             

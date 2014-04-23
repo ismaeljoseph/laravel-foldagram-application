@@ -40,3 +40,5 @@ Route::post('/subscribe', array('as' => 'post_subscribe', function(){
 }));
 
 Route::post('/create', array('as' => 'create', 'uses' => 'FoldagramsController@postCreate'));
+Route::get('/remove/{id}/{identifier}', 
+    array('as' => 'remove', 'uses' => 'FoldagramsController@removeAddress'));
